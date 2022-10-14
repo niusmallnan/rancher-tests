@@ -30,6 +30,7 @@ AUTH_URL = BASE_URL + '-public/localproviders/local?action=login'
 DEFAULT_TIMEOUT = 120
 DEFAULT_CATALOG = "https://github.com/rancher/integration-test-charts"
 WAIT_HTTP_ERROR_CODES = [404, 405]
+ADMIN_PASSWORD = ''
 
 
 class ManagementContext:
@@ -86,7 +87,7 @@ def admin_mc():
     """Returns a ManagementContext for the default global admin user."""
     r = requests.post(AUTH_URL, json={
         'username': 'admin',
-        'password': 'Rancher@123456',
+        'password': ADMIN_PASSWORD,
         'responseType': 'json',
     }, verify=False)
     protect_response(r)

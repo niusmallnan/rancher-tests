@@ -616,7 +616,7 @@ def test_readonly_cannot_perform_app_action(admin_mc, admin_pc, user_mc,
 
     app = client.create_app(
         name="app-" + random_str(),
-        externalId="catalog://?catalog=library&template=mysql&version=0.3.7&"
+        externalId="catalog://?catalog=library&template=mysql&version=1.3.1&"
                    "namespace=cattle-global-data",
         targetNamespace=ns.name,
         projectId=project.id

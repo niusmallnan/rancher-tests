@@ -22,6 +22,12 @@ pip install tox
 
 Start a rancher instance: https://docs.ranchermanager.rancher.io/getting-started/quick-start-guides/deploy-rancher-manager/helm-cli
 
+Additionally, the following environment variables need to be set for the rancher instance:
+
+```
+CATTLE_SERVER_VERSION=dev
+```
+
 Run with Tox - from tests/integration dir. See tox.ini for configuration
 
 * the entire suite: `tox` (from tests/integration)
